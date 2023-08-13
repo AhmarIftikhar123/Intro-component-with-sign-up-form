@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="card">
+      <div id="left_side_text">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div id="right_side_box">
+        <header>
+          <p><strong> Try it free 7 days </strong>then $20/mo. thereafter</p>
+        </header>
+        <form><div class="all-inputs">
+           <input
+            type="text"
+            id="first_name"
+            placeholder="First Name"
+          /> <small>First Name can't be empty</small>
+        </div>
+         <div class="all-inputs">
+             <input
+            type="text"
+            id="last_name"
+            placeholder="Last Name"
+          /> <small>Last Name can't be empty</small>
+          </div>
+         <div class="all-inputs">
+            <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+          /> <small>Looks like this is not an email</small>
+          </div>
+          <div class="all-inputs">
+            <input
+            type="number"
+            id="password"
+            placeholder="Password"
+          /> <small>Password can't be empty</small>
+          </div>
+          
+          <button type="submit" id="submitbtn">Claim your free trial</button>
+          <footer>
+          <p>By clicking the button, you are agreeing to <a href="#">our Terms and Services.</a></p>
+        </footer>
+        </form>
+        
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
