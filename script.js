@@ -104,9 +104,15 @@ txt_box.addEventListener("input", () => {
   } else {
     txt_error.style.visibility = "hidden";
     txt_error.textContent = ``;
-    email.nextElementSibling.style.visibility = "hidden";
+    txt_box.nextElementSibling.style.visibility = "hidden";
     return (valid_txt = true);
   }
+});
+
+txt_box.addEventListener("blur", () => {
+  txt_error.style.visibility = "hidden";
+  txt_error.textContent = ``;
+  txt_box.nextElementSibling.style.visibility = "hidden";
 });
 
 submit_btn.onclick = (e) => {
