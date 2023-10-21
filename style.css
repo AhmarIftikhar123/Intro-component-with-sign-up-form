@@ -107,6 +107,10 @@ i.fa-eye-slash{
     color: black;
 }
 
+i.green{
+  color:green;
+}
+
 i.fa-eye{
     color: var(--Red);
 }
