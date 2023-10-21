@@ -177,3 +177,29 @@ textarea{
 small {
   visibility: hidden;
 }
+/* Media queries */
+
+@media (max-width: 450px) {
+  html{
+    font-size: .7rem;
+  }
+  body {
+    background: var(--Red) url(images/bg-intro-mobile.png) center center
+      no-repeat;
+      background-size: cover;
+  }
+  main{
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    gap: 1rem;
+  }
+  h1{
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+  .description{
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+}
