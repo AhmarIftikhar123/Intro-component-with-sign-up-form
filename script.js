@@ -35,25 +35,50 @@ Show_hide_btn.onclick = (e) => {
 let validator_name = "";
 first_name.addEventListener("input", () => {
   let regex = /^[A-Za-z]+\s[A-Za-z]+$/;
+
   if (first_name.value === "") {
     name_error.textContent = "";
+
     name_error.style.visibility = "hidden";
+
     first_name.nextElementSibling.style.visibility = "hidden";
+
     return (validator_name = false);
   } else if (!first_name.value.match(/[A-Za-z]+ /)) {
     name_error.textContent = "Valid Name Required";
+
     name_error.style.visibility = "visible";
+
     first_name.nextElementSibling.style.visibility = "visible";
+
     return (validator_name = false);
   } else if (!first_name.value.match(regex)) {
     name_error.textContent = "Full Name Required";
+
     name_error.style.visibility = "visible";
+    first_name.nextElementSibling.classList.remove("green");
+
+    first_name.nextElementSibling.classList.replace(
+      "fa-circle-check",
+      "fa-circle-exclamation"
+    );
+
     first_name.nextElementSibling.style.visibility = "visible";
+
     return (validator_name = false);
   } else if (first_name.value.match(regex)) {
     name_error.textContent = "";
+
     name_error.style.visibility = "hidden";
-    first_name.nextElementSibling.style.visibility = "hidden";
+    first_name.nextElementSibling.classList.replace(
+      "fa-circle-exclamation",
+      "fa-circle-check"
+    );
+
+    first_name.nextElementSibling.classList.add("green");
+
+    first_name.nextElementSibling.style.visibility = "visible";
+
     return (validator_name = true);
   }
 });
@@ -77,11 +102,21 @@ email.addEventListener("input", () => {
     email_error.textContent = "Valid Email Required";
     email_error.style.visibility = "visible";
     email.nextElementSibling.style.visibility = "visible";
+    email.nextElementSibling.classList.replace(
+      "fa-circle-check",
+      "fa-circle-exclamation"
+    );
+    email.nextElementSibling.classList.remove("green");
     return (valid_email = false);
   } else {
     email_error.textContent = "";
     email_error.style.visibility = "hidden";
-    email.nextElementSibling.style.visibility = "hidden";
+    email.nextElementSibling.classList.replace(
+      "fa-circle-exclamation",
+      "fa-circle-check"
+    );
+    email.nextElementSibling.classList.add("green");
+    email.nextElementSibling.style.visibility = "visible";
     return (valid_email = true);
   }
 });
