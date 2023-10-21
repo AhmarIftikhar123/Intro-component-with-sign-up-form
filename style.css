@@ -24,6 +24,7 @@ body {
   background: var(--Red) url(images/bg-intro-desktop.png) center center
     no-repeat;
   background-size: cover;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,7 +32,6 @@ body {
   justify-content: center;
 }
 main {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +56,7 @@ h1 {
 .description {
   color: #fff;
   margin-top: 1rem;
+  font-size: 0.98rem;
 }
 
 /* right_side */
@@ -93,28 +94,29 @@ form {
   position: relative;
 }
 
-.input_box i{
-    font-size: 1.4rem;
-    color: var(--Red);
-    cursor: pointer;
-    position: absolute;
-    top: 0.9rem;
-    right: 0.6rem;
-    visibility: hidden;
+.input_box i {
+  font-size: 1.4rem;
+  color: var(--Red);
+  cursor: pointer;
+  position: absolute;
+  top: 0.9rem;
+  right: 0.6rem;
+  visibility: hidden;
 }
 
-i.fa-eye-slash{
-    color: black;
+i.fa-eye-slash {
+  color: black;
 }
 
-i.green{
+i.green {
   color: green;
 }
 
-i.fa-eye{
-    color: var(--Red);
+i.fa-eye {
+  color: var(--Red);
 }
-.input_box input,.input_box textarea {
+.input_box input,
+.input_box textarea {
   width: 100%;
   font-size: 1rem;
   font-weight: 600;
@@ -125,15 +127,15 @@ i.fa-eye{
   border-radius: 0.3rem;
 }
 
-.input_box input:focus ,textarea:focus {
+.input_box input:focus,
+textarea:focus {
   outline: 2px solid var(--Dark-Blue);
   color: var(--Dark-Blue);
 }
 
-textarea{
-    height: 3.2rem;
+textarea {
+  height: 3.2rem;
 }
-
 
 .input_box small {
   display: inline-block;
@@ -156,9 +158,8 @@ textarea{
   border-radius: 0.3rem;
   cursor: pointer;
   color: #fff;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   box-shadow: none;
-
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 #submit_btn:hover {
@@ -181,28 +182,29 @@ textarea{
 small {
   visibility: hidden;
 }
+
 /* Media queries */
 
-@media (max-width: 450px) {
-  html{
-    font-size: .7rem;
+@media (max-width: 550px) {
+  html {
+    font-size: 0.7rem;
   }
   body {
     background: var(--Red) url(images/bg-intro-mobile.png) center center
       no-repeat;
-      background-size: cover;
+    background-size: cover;
   }
-  main{
+  main {
     flex-direction: column;
     padding: 0;
     text-align: center;
     gap: 1rem;
   }
-  h1{
+  h1 {
     font-size: 1.7rem;
     line-height: 1.2;
   }
-  .description{
+  .description {
     margin-top: 1rem;
     line-height: 1.7;
   }
