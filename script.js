@@ -52,7 +52,6 @@ first_name.addEventListener("input", () => {
     first_name.nextElementSibling.style.visibility = "visible";
     first_name.nextElementSibling.classList.remove("green");
 
-
     return (validator_name = false);
   } else if (!first_name.value.match(regex)) {
     name_error.textContent = "Full Name Required";
@@ -137,11 +136,22 @@ txt_box.addEventListener("input", () => {
     txt_error.textContent = `${left_msg} More word Required`;
     txt_error.style.visibility = "visible";
     txt_box.nextElementSibling.style.visibility = "visible";
+    txt_box.nextElementSibling.classList.replace(
+      "fa-circle-check",
+      "fa-circle-exclamation"
+    );
+    txt_box.nextElementSibling.classList.remove("green");
+
     return (valid_txt = false);
   } else {
     txt_error.style.visibility = "hidden";
     txt_error.textContent = ``;
-    txt_box.nextElementSibling.style.visibility = "hidden";
+    txt_box.nextElementSibling.classList.replace(
+      "fa-circle-exclamation",
+      "fa-circle-check"
+    );
+    txt_box.nextElementSibling.style.visibility = "visible";
+    txt_box.nextElementSibling.classList.add("green");
     return (valid_txt = true);
   }
 });
