@@ -50,6 +50,8 @@ first_name.addEventListener("input", () => {
     name_error.style.visibility = "visible";
 
     first_name.nextElementSibling.style.visibility = "visible";
+    first_name.nextElementSibling.classList.remove("green");
+
 
     return (validator_name = false);
   } else if (!first_name.value.match(regex)) {
